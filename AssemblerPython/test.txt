@@ -1,0 +1,8 @@
+     sw $t2, 8($t0)
+     addi $t0, $t0, 4
+L1:  slt $t0, $s2, $s3
+     beq $t0, $t1, L1
+     sll $t2, $s0, 4
+     add $t1, $t1, $s4
+     j For
+For: add $s1, $s1, $t2
